@@ -1,0 +1,14 @@
+﻿div {
+    background-color:blue;
+    height:40px;
+}
+a {
+    color:white;
+    padding:5px;
+    font-size:30px;
+    margin-left:20px;
+}
+a:hover {
+    background-color:white;
+    color:blue;
+}

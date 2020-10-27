@@ -1,0 +1,28 @@
+﻿body {
+    margin:0;
+}
+.texto
+{   
+    width:800px;
+    height:1000px;
+    background-color:aqua;
+    color:red;
+    font-size:40px;
+    font-family:tiriri,Comic Sans MS;
+    font-weight:normal;
+    text-align:center;
+    text-transform:uppercase;
+    text-decoration:underline;
+
+    margin:auto;
+    margin-top:20px;
+    padding-top:20px;
+
+}
+.flutuante {
+    background-color:black;
+    height:100px;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+}
