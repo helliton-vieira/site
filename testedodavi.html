@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Pagina de teste</title>
+    <style>
+
+        /*css*/
+        body {
+            background-image: linear-gradient(rgb(79 88 83 / 40%),black), url(https://i.pinimg.com/originals/58/15/ec/5815ecc05e41373624cef809fcc09991.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+            margin: 0px 0px 0px;
+            padding: 0px;
+        }
+
+        #titulo {
+            color: white;
+            font-size: 50pt;
+            font-family: Arial;
+
+            text-align: center;
+            opacity: 0;
+            animation: surgir 1s forwards;
+
+            text-shadow: 2px 2px 9px white;
+        }
+
+        /*Keyframes é usado para animações*/
+        @keyframes surgir {
+            to {
+                opacity: 1;
+                transform: translateY(100px);
+            }
+        }
+
+        header {
+            background-color: black;
+            padding: 4px;
+            border-bottom: 1px solid white;
+        }
+        ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        
+        }
+        #clickme:hover {
+            transition: 0.5s color;
+            color: darkorange;
+        }
+        li {
+            color: white;
+            font-family: arial;
+            font-size: 15px;
+            display: inline;
+            padding-left: 20px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        //codigo java script são duas funções que retornão um alerta
+
+        function msg2() {
+            alert('vc deve jogar com um amigo e clickar no fanstasma e tbm use wasd para mexer o fantasma')
+        }
+
+        //codigos do fantasma
+
+        //gambiarra abaixo
+
+        
+
+        addEventListener('load', () => {
+
+        const fan = document.getElementById('fantasma')
+
+        fan.style.position = 'fixed'
+
+        var x = 48
+        var y = 40
+
+            fan.style.width = '50px';
+
+        addEventListener('keydown', (btn) => {
+
+            if (btn.key === "w") { y-=3 }
+            if (btn.key === "s") { y+=3 }
+            if (btn.key === "a") {
+                x-=3
+                fan.style.transform = "scaleX(1)"
+            }
+            if (btn.key === "d") {
+                x+=3
+                fan.style.transform = "scaleX(-1)"
+            }
+
+            fan.style.left = x + "%"
+            fan.style.top = y + "%"
+
+            if (x >= 100) { x = 2 }
+            if (x <= -1) { x = 97 }
+            if (y >= 100) { y = 2 }
+            if (y <= -1) { y = 97 }
+            console.log('Seu Y ' + y)
+            console.log('Seu X ' + x)
+
+        })
+
+            fan.style.left = x + "%"
+            fan.style.top = y + "%"
+
+        })
+
+
+    </script>
+    <header>
+        <ul type="none">
+            <li>Menu de exemplo</li>
+            <li onclick="msg2()" id="clickme">click aqui</li>
+            <li><a href="https://code.visualstudio.com/" target="_blank">veja o vs code</a></li>
+        </ul>
+    </header>
+
+    <h1 id="titulo">pegue o fantasma</h1>
+    <img src="https://i.gifer.com/origin/d5/d5b9ae79f5254caaf0fdcf2affcec5b0_w200.gif" id="fantasma" onclick="alert('vc pegou na bunda do fantasma!')">
+
+</body>
+</html>

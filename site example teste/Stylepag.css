@@ -1,0 +1,97 @@
+﻿body {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5),rgb(0, 0, 0, 0.5)), url(florest.jpg);
+    backgorund-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    margin: 0px 0px 0px;
+}
+
+/*Menu*/
+header {
+    background-color: black;
+    padding: 5px;
+}
+
+.menu {
+    margin: 0px 0px 0px;
+
+}
+
+.menu li {
+    color: white;
+    font-size: 15pt;
+    font-family: arial;
+    padding-left: 25px;
+    display: inline-block;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+    .menu a:hover {
+        transition: 0.5s text-shadow;
+        text-shadow: 3px 3px 5px white;
+    }
+
+/*submenu*/
+
+.submenu {
+    position: absolute;
+    display: none;
+    width: 300px;
+
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#categoria:hover .submenu {
+    display: block;
+}
+
+/*Conteúdos*/
+
+#mapstitulo {
+    text-align: center;
+    color: white;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+
+    opacity: 0;
+    animation: surgir 1s 0.2s forwards;
+}
+
+@keyframes surgir {
+    to {
+        opacity: 1;
+        transform: translatey(400px);
+    }
+}
+
+#icone-maps {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: surgir2 1s 0.3s forwards;
+
+    transition: 1s margin-top;
+}
+
+    #icone-maps:hover {
+        transition: 1s margin-top;
+        margin-top: -8px;
+       
+    }
+
+    @keyframes surgir2 {
+        to {
+        opacity: 1;
+        transform: translatey(350px);
+    }
+}
+
